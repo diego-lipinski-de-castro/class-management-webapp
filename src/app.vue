@@ -1,9 +1,6 @@
 <template>
     <div id="app">
 
-        <connection></connection>
-        <loading></loading>
-
         <router-view></router-view>
 
     </div>
@@ -11,19 +8,12 @@
 
 <script>
 
-    import {mapActions} from 'vuex'
-
-    import {connection, loading} from './components/'
-
     export default {
-        name: 'app',
-        components: {
-            connection,
-            loading
-        }
+        name: 'app'
     }
 
 </script>
 
-<style lang="">
+<style lang="sass">
+
 </style>

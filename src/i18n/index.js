@@ -28,8 +28,14 @@ const i18n = new VueI18n({
     locale: 'pt-br',
     fallbackLocale: 'pt-br',
     messages: {
-      'pt-br': require('./locales/pt-br.json'),
-      'en-us': require('./locales/en-us.json')
+      'pt-br': {
+        cm: require('./locales/pt-br.json'),
+        'at-ui': require('at-ui/dist/locale/pt-BR').default
+      },
+      'en-us': {
+        cm: require('./locales/en-us.json'),
+        'at-ui': require('at-ui/dist/locale/en-US').default
+      }
     }
 })
 

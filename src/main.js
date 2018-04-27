@@ -29,8 +29,24 @@ import i18n from './i18n'
 store.subscribe(mutation => {
     if(mutation.type === 'SET_LOCALE') {
         i18n.locale = mutation.payload
+        // i18n.setLocale(mutation.payload)
     }
 })
+
+window.addEventListener('online', () => {
+    store.dispatch('setConnection', true)
+})
+
+window.addEventListener('offline', () => {
+    store.dispatch('setConnection', false)
+})
+
+// at-ui
+import AtUI from 'at-ui'
+import 'at-ui-style'
+
+AtUI.i18n((key, value) => i18n.t(key, value))
+Vue.use(AtUI)
 
 // init
 import app from './app'

@@ -6,8 +6,7 @@ Vue.use(Vuex)
 import {
     i18n,
     connection,
-    notification,
-    loading
+    notification
 } from './modules/'
 
 const store = new Vuex.Store({
@@ -15,8 +14,7 @@ const store = new Vuex.Store({
     modules: {
         i18n,
         connection,
-        notification,
-        loading
+        notification
     },
     plugins: []
 })

@@ -1,7 +1,7 @@
 const SET_CONNECTION = 'SET_CONNECTION'
 
 const state = {
-    online: true
+    online: navigator.onLine
 }
 
 const mutations = {
